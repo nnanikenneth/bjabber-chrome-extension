@@ -1,0 +1,8 @@
+/* eslint import/prefer-default-export:0 */
+export const AUTHENTICATION_ACTIONS = {
+  LOGGED_IN: 'LOGGED_IN',
+  LOGIN_FAILED: 'LOGIN_FAILED',
+  LOGGED_OUT: 'LOGGED_OUT',
+  START_AUTH: 'START_AUTH',
+  CLEAR_ERROR: 'CLEAR_ERROR',
+};

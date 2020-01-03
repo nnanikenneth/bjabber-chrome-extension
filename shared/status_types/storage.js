@@ -1,0 +1,8 @@
+//shouled be deleted
+export const STORAGE_STATUS = {
+  START: 'STORAGE_START',
+  LOAD: 'STORAGE_LOAD',
+  READY: 'STORAGE_READY',
+  LOADING: 'STORAGE_LOADING',
+  SAVING: 'STORAGE_SAVING',
+};

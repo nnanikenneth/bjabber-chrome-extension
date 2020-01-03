@@ -1,0 +1,15 @@
+.DS_Store
+.idea
+jsconfig.json
+node_modules
+semantic
+semantic.json
+build
+dist
+coverage
+*.log
+.react-playground
+.webpack_cache
+.vscode
+*.swp
+*-report.html

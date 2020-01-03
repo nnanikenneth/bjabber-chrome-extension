@@ -1,0 +1,91 @@
+{
+  "manifest_version": 2,
+  "name": "Jabber-SDK-Extension",
+  "short_name": "JSK",
+  "description": "The next generation of Booking Jabber SDK Extension Extension",
+  "version": "0.0.47",
+  "permissions": [
+    "background",
+    "browsingData",
+    "contextMenus",
+    "cookies",
+    "desktopCapture",
+    "management",
+    "notifications",
+    "privacy",
+    "proxy",
+    "idle",
+    "storage",
+    "tabs",
+    "identity",
+    "identity.email",
+    "*://*/*"
+  ],
+  "background": {
+    "page": "background.html",
+    "persistent": true
+  },
+  "browser_action": {
+    "default_title": "Jabber SDK Extension",
+    "default_popup": "popup.html",
+    "default_icon": {
+      "128": "icons/jabber.png"
+    }
+  },
+  "icons": {
+    "128": "icons/jabber.png"
+  },
+  "web_accessible_resources": [
+    "styles/*.css",
+    "styles/themes/default/assets/fonts/*eot",
+    "styles/themes/default/assets/fonts/*otf",
+    "styles/themes/default/assets/fonts/*ttf",
+    "styles/themes/default/assets/fonts/*woff",
+    "styles/themes/default/assets/fonts/*woff2",
+    "styles/themes/default/assets/fonts/*.svg",
+    "styles/themes/default/assets/images/*png",
+    "icons/*.png"
+  ],
+  "content_scripts": [
+    {
+      "js": [
+        "commons.js",
+        "content.js"
+      ],
+      "matches": [
+        "*://webtop.booking.com/*/hoteladmin/*",
+        "*://webtop.booking.com/*/desktop/*",
+        "*://www.booking.com/*",
+        "*://*.dev.booking.com/*",
+        "*://*.booking.com/bookadmin/*",
+        "*://*.booking.com/hoteladmin/*",
+        "*://*.booking.com/hotel/hoteladmin/*",
+        "*://*.booking.com/BBCRM/*",
+        "*://cs.booking.com/*",
+        "*://*.booking.com/cuca/picklist2.0/*",
+        "*://*.sap.booking.com/booking/*",
+        "*://codi.booking.com/booking/*",
+        "*://codi-dev.booking.com/booking/*",
+        "*://bookinghelpdesk.zendesk.com/*",
+        "*://booking-zen-6.zendesk.com/*",
+        "*://googlemail.com/*", 
+        "*://mail.google.com/*",         
+        "*://office.booking.com/*"     
+      ]
+    }
+  ],
+  "externally_connectable": {
+    "matches": [
+      "*://webtop.booking.com/*/desktop/*"
+    ]
+  },
+  "content_security_policy": "script-src 'self' chrome-extension://ppbllmlcmhfnfflbkbinnhacecaankdh; object-src 'self'", 
+  "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAnFzU4XLlqBc6oBB/F3YgoAj5uyvmDVSBF61lf0Vga0K4R5aAPKsjyHa4JSD9LAeg1Xnx0nzSG0TbeuBNdRc2TGMeB9++3KdyvpZW/Ff/EtYs1srKsdaCjAhby+6UxiRa0U6D/vm23J/42mStRE7GKbtlXtVGi89YmZxRQx7TWq5Mv8iUTycmbBH8oSwo/mQnpbn8pDQOxm9qC0whMbCO4UFXxq2bPvn4gB43Xq9SApZiMyASqK4X31P8AejO2rK43GKLj+HCanhWfCjTOGvJ+spuPS2LTvYbPurSUoD+r+tys6IImIffEtSND80uTa+CoSovwYAhJagE+OJTYH/gEwIDAQAB",
+  "oauth2": {
+    "client_id": "526463346781-0rucpdj2rolinchjbsmi43iog92e9fo9.apps.googleusercontent.com",
+    "scopes": [
+      "profile",
+      "email"
+    ]
+  }
+}
